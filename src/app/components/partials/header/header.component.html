@@ -1,0 +1,25 @@
+<header>
+    <div class="container">
+        <a routerLink="/" class="logo">El Criollo</a>
+        <nav>
+            <ul>
+                <li *ngIf="!isAuth">
+                    <a routerLink="/login">Iniciar Sesión</a>
+                </li>
+                <li *ngIf="isAuth" class="menu-container">
+                    <a routerLink="/dashboard">{{user.name}}</a>
+                    <div class="menu">
+                        <a routerLink="/profile">Perfil</a>
+                        <a routerLink="/orders">Órdenes</a>
+                        <a (click)="logout()">Salir</a>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/cart-page">
+                        Carrito <span *ngIf="cartQuantity">{{cartQuantity}}</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

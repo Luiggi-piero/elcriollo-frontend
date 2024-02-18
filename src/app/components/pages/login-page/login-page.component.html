@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="details">
+        <app-title title="Iniciar Sesión"></app-title>
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <text-input label="Correo" type="email" [control]="fc.email" [showErrosWhen]="isSubmitted"></text-input>
+            <text-input label="Contraseña" type="password" [control]="fc.password" [showErrosWhen]="isSubmitted"></text-input>
+            
+            <default-button text="Iniciar"></default-button>
+            
+            <div class="register">
+                Eres usuario nuevo? &nbsp;
+                <!-- navega al registro y establece el parametro de consulta returnUrl al hacer click en ir al registro -->
+                <a routerLink="/register" [queryParams]="{returnUrl: returnUrl}">Registrarse</a>
+            </div>
+        </form>
+    </div>
+</div>
