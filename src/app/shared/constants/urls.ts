@@ -1,7 +1,7 @@
 // import { environment } from "src/environments/environment.prod";
 // const BASE_URL = environment.production ? 'https://el-criollo.onrender.com' : 'http://localhost:5000';
 
-const BASE_URL = 'https://el-criollo.onrender.com'; // descomentar para enviar a produccion
+const BASE_URL = 'https://elcriollo-backend.onrender.com'; // descomentar para enviar a produccion
 // const BASE_URL = 'http://localhost:5000';  // uso para desarrollo
 
 export const FOODS_URL = BASE_URL + "/api/foods";
